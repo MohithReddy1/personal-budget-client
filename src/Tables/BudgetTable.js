@@ -26,7 +26,7 @@ function BudgetTable() {
       const token = localStorage.getItem('token');
 
       // Fetch expense data
-      const expenseEndpoint = `https://personal-budget-backend-7pjt.onrender.com/get-expenses/${userData}?month=${selectedMonth}`;
+      const expenseEndpoint = `http://68.183.138.206:4000/get-expenses/${userData}?month=${selectedMonth}`;
       const expenseResponse = await axios.get(expenseEndpoint, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ function BudgetTable() {
       setExpenseData(expenseResponse.data);
 
       // Fetch budget data
-      const budgetEndpoint = `https://personal-budget-backend-7pjt.onrender.com/get-budgets/${userData}?month=${selectedMonth}`;
+      const budgetEndpoint = `http://68.183.138.206:4000/get-budgets/${userData}?month=${selectedMonth}`;
       const budgetResponse = await axios.get(budgetEndpoint, {
         headers: {
           Authorization: `Bearer ${token}`,

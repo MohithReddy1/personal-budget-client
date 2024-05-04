@@ -187,7 +187,7 @@ function Visualizations() {
       try {
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('userData');
-        const endpoint = `https://personal-budget-backend-7pjt.onrender.com/get-expenses/${userData}?month=${selectedMonth}`;
+        const endpoint = `http://68.183.138.206:4000/get-expenses/${userData}?month=${selectedMonth}`;
         const res = await axios.get(endpoint, {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -224,7 +224,7 @@ function Visualizations() {
       try {
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('userData');
-        const endpoint = `https://personal-budget-backend-7pjt.onrender.com/get-budgets/${userData}?month=${selectedMonth}`;
+        const endpoint = `http://68.183.138.206:4000/get-budgets/${userData}?month=${selectedMonth}`;
         const res = await axios.get(endpoint, {
           headers: {
             Authorization: `Bearer ${token}`,

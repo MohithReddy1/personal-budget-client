@@ -28,7 +28,7 @@ function ManageExpense() {
         const userData = localStorage.getItem('userData');
         const token = localStorage.getItem('token');
 
-        const categoriesResponse = await axios.get(`https://personal-budget-backend-7pjt.onrender.com/get-categories/${userData}?month=${selectedMonth}`, {
+        const categoriesResponse = await axios.get(`http://68.183.138.206:4000/get-categories/${userData}?month=${selectedMonth}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -58,7 +58,7 @@ function ManageExpense() {
         console.error('Month, category, and expense amount are required');
         return;
       }
-      await axios.post('https://personal-budget-backend-7pjt.onrender.com/add-expense', {
+      await axios.post('http://68.183.138.206:4000/add-expense', {
         userData: userData,
         month: selectedMonth,
         category: selectedCategory,

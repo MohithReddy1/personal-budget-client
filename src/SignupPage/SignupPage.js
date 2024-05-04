@@ -27,7 +27,7 @@ function SignupPage() {
     e.preventDefault();
 
     axios
-      .post('https://personal-budget-backend-7pjt.onrender.com/Signup', formData)
+      .post('http://68.183.138.206:4000/Signup', formData)
       .then((response) => {
         setSuccessMessage(response.data.message);
         setErrorMessage('');
