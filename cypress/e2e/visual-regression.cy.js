@@ -8,7 +8,7 @@ describe('Visual Regression Test', () => {
   
     it('should match the login page screenshot', () => {
       // Visit the login page
-      cy.visit('http://localhost:3000/login');
+      cy.visit('http://142.93.2.86:3000/login');
   
       // Take a full-page screenshot using Applitools
       cy.eyesOpen({
